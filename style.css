@@ -1,0 +1,32 @@
+
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #1a1a1a;
+            --nav-bg: #ffffff;
+            --card-bg: #ffffff;
+        }
+
+        .dark-theme {
+            --bg-color: #1a1a1a ;
+            --text-color: #ffffff;
+            --nav-bg: #2d2d2d;
+            --card-bg: #3d3d3d;
+        }
+
+        body {
+            overflow-x: hidden;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: Helvetica, sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Dark mode specific styles */
+        
+
+        .dark-theme .border-black {
+            border-color: #4a4a4a;
+        }
+        .nav-download-btn {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+          }

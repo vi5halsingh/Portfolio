@@ -24,7 +24,7 @@
     <nav class="flex justify-between items-center p-2 mx-20">
       
       <h1 class="text-xl flex justify-center items-center  gap-8 font-bold"><a href="index.html" class="hover:opacity-30">Vi5hal</a>
-        <button id="themeToggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+        <button id="themeToggle" class="hidden p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
         <div class="links flex gap-4 items-center">
             <!-- Theme Toggle Button -->
               <svg class="w-6 h-6 hidden" id="lightIcon" fill="currentColor" viewBox="0 0 24 24">
@@ -353,36 +353,35 @@
       </div>
       <div class="contact-form w-full py-20 max-w-4xl mx-auto">
           <form action="https://api.web3forms.com/submit" method="POST" id="form" class="space-y-6">
-              <input type="hidden" name="access_key" value="2a9803cc-2e6e-45c6-85a3-370e93130b94"  />
-              <input type="hidden" name="subject" value="New Portfolio Inquiry" class="bg-transparant " />
-              <input type="checkbox" name="botcheck" class="hidden" />
-
+              <input type="hidden" name="access_key" value="2a9803cc-2e6e-45c6-85a3-370e93130b94" />
+              <input type="hidden" name="subject" value="New Portfolio Inquiry" class="dark:bg-gray-800" />
+              
               <div>
                   <input type="text" name="name" placeholder="Full Name" required 
-                         class="w-full p-4 border-b border-black focus:outline-none focus:ring-2 focus:ring-black bg-transparant text-black "/>
+                         class="w-full p-4 border-b border-black dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-gray-400 bg-transparent dark:text-gray-200"/>
               </div>
               
               <div>
                   <input type="email" name="email" placeholder="Email Address" required 
-                         class="w-full p-4 border-b border-black focus:outline-none focus:ring-2 focus:ring-black bg-transparant text-black "/>
+                         class="w-full p-4 border-b border-black dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-gray-400 bg-transparent dark:text-gray-200"/>
               </div>
               
               <div>
                   <input type="text" name="phone" placeholder="Phone Number" 
-                         class="w-full p-4 border-b border-black focus:outline-none focus:ring-2 focus:ring-black bg-transparant text-black "/>
+                         class="w-full p-4 border-b border-black dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-gray-400 bg-transparent dark:text-gray-200"/>
               </div>
               
               <div>
                   <textarea rows="3" name="message" placeholder="Your Message" required 
-                            class="w-full p-4 border-b border-black focus:outline-none focus:ring-2 focus:ring-black bg-transparant text-black "></textarea>
+                            class="w-full p-4 border-b border-black dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-gray-400 bg-transparent dark:text-gray-200"></textarea>
               </div>
 
               <button type="submit" 
-                      class="bg-black text-white px-8 py-3 rounded-lg hover:bg-gray-800 transition-colors w-full sm:w-auto text-center bg-transparant text-black ">
+                      class="bg-black dark:bg-gray-800 text-white dark:text-gray-200 px-8 py-3 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-700 transition-colors w-full sm:w-auto text-center">
                   Send Message
               </button>
               
-              <p class="text-center text-gray-500" id="result"></p>
+              <p class="text-center text-gray-500 dark:text-gray-400" id="result"></p>
           </form>
       </div>
     </section>
@@ -445,7 +444,7 @@
     },1000)
   </script>
 
-<button id="topButton" class="fixed bottom-8 right-6 p-4 text-white rounded-full opacity-0 transition-all duration-300 hover:scale-110 hover:bg-gray-400 shadow-xl bg-gray-200 ">
+<button id="topButton" class="fixed bottom-8 right-6 p-4 text-white rounded-full opacity-0 transition-all duration-300 hover:scale-110  shadow-xl bg-gray-500 hover:bg-gray-200">
   <img src="./assets/up (1).svg" alt="" class="h-[20px] w-[20px] ">
 </button>
 

@@ -1,24 +1,35 @@
 
-        :root {
-            --bg-color: #ffffff;
+:root {
+            --bg-color: linear-gradient(90deg, #f0f0f0 21px, transparent 1%) center,
+                        linear-gradient(#f0f0f0 21px, transparent 1%) center,
+                        #ffffff;
             --text-color: #1a1a1a;
             --nav-bg: #ffffff;
             --card-bg: #ffffff;
         }
 
-        .dark-theme {
-            --bg-color: #1a1a1a ;
-            --text-color: #ffffff;
-            --nav-bg: #2d2d2d;
-            --card-bg: #3d3d3d;
-        }
-
         body {
             overflow-x: hidden;
-            background-color: var(--bg-color);
+            background: var(--bg-color);
+            background-size: 22px 22px;
+            background-attachment: fixed;
+            animation: gridScroll 100s linear infinite;
             color: var(--text-color);
             font-family: Helvetica, sans-serif;
             transition: background-color 0.3s, color 0.3s;
+        }
+
+        @keyframes gridScroll {
+            from { background-position: 0 0; }
+            to { background-position: 500px 1000px; }
+        }
+
+        .dark-theme {
+            --bg-color: #1a1a1a;
+            --text-color: #ffffff;
+            --nav-bg: #2d2d2d;
+            --card-bg: #3d3d3d;
+            background-size: auto; /* Reset grid size in dark mode */
         }
 
         /* Dark mode specific styles */

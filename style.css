@@ -1,36 +1,57 @@
 
 :root {
-            --bg-color: linear-gradient(90deg, #f0f0f0 21px, transparent 1%) center,
-                        linear-gradient(#f0f0f0 21px, transparent 1%) center,
-                        #ffffff;
-            --text-color: #1a1a1a;
-            --nav-bg: #ffffff;
-            --card-bg: #ffffff;
-        }
+    --bg-color: #ffffff;
+    --text-color: #1a1a1a;
+    --nav-bg: #ffffff;
+    --card-bg: #ffffff;
+    --grid-color: rgba(54, 66, 226, 0.801);
+}
 
-        body {
-            overflow-x: hidden;
-            background: var(--bg-color);
-            background-size: 22px 22px;
-            background-attachment: fixed;
-            animation: gridScroll 100s linear infinite;
-            color: var(--text-color);
-            font-family: Helvetica, sans-serif;
-            transition: background-color 0.3s, color 0.3s;
-        }
+body {
+    overflow-x: hidden;
+    position: relative;
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-family: Helvetica, sans-serif;
+}
 
-        @keyframes gridScroll {
-            from { background-position: 0 0; }
-            to { background-position: 500px 1000px; }
-        }
+body::before {
+    content: '';
+    position: fixed;
+    top: -100%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: 
+        repeating-linear-gradient(90deg, 
+            transparent 0, 
+            transparent 19px, 
+            var(--grid-color) 20px,
+            var(--grid-color) 20px
+        ),
+        repeating-linear-gradient(0deg, 
+            transparent 0, 
+            transparent 19px, 
+            var(--grid-color) 20px,
+            var(--grid-color) 20px
+        );
+    transform: perspective(600px) rotateX(60deg) translateZ(-100px);
+    animation: gridMovement 2s linear infinite;
+    z-index: -1;
+}
 
-        .dark-theme {
-            --bg-color: #1a1a1a;
-            --text-color: #ffffff;
-            --nav-bg: #2d2d2d;
-            --card-bg: #3d3d3d;
-            background-size: auto; /* Reset grid size in dark mode */
-        }
+@keyframes gridMovement {
+    from { transform: perspective(600px) rotateX(60deg) translateZ(-100px) translateY(0); }
+    to { transform: perspective(600px) rotateX(60deg) translateZ(-100px) translateY(20px); }
+}
+
+.dark-theme {
+    --bg-color: #1a1a1a;
+    --text-color: #ffffff;
+    --nav-bg: #2d2d2d;
+    --card-bg: #3d3d3d;
+    --grid-color: rgba(255, 215, 0, 0.2);
+}
 
         /* Dark mode specific styles */
         

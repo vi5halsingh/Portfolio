@@ -51,7 +51,7 @@
         <a href="#gallery" class="link font-medium text-lg opacity-30 hover:opacity-100">Gallery</a>
         <!-- Add Download Resume Button -->
         <a href="./assets/Vishal Singh Lodhi.pdf" download 
-           class="ml-4  border-black border-2 rounded-lg  rounded text-lg text-gray-500 hover:text-black px-2 ">
+           class="ml-4  border-black border-2 rounded-lg  rounded text-lg text-gray-500 hover:text-white hover:border-white px-2 ">
            Resume
         </a>
       </div>
@@ -353,32 +353,32 @@
       </div>
       <div class="contact-form w-full py-20 max-w-4xl mx-auto">
           <form action="https://api.web3forms.com/submit" method="POST" id="form" class="space-y-6">
-              <input type="hidden" name="access_key" value="2a9803cc-2e6e-45c6-85a3-370e93130b94" />
-              <input type="hidden" name="subject" value="New Portfolio Inquiry" />
+              <input type="hidden" name="access_key" value="2a9803cc-2e6e-45c6-85a3-370e93130b94"  />
+              <input type="hidden" name="subject" value="New Portfolio Inquiry" class="bg-transparant " />
               <input type="checkbox" name="botcheck" class="hidden" />
 
               <div>
                   <input type="text" name="name" placeholder="Full Name" required 
-                         class="w-full p-4 border-b border-black focus:outline-none focus:ring-2 focus:ring-black"/>
+                         class="w-full p-4 border-b border-black focus:outline-none focus:ring-2 focus:ring-black bg-transparant text-black "/>
               </div>
               
               <div>
                   <input type="email" name="email" placeholder="Email Address" required 
-                         class="w-full p-4 border-b border-black focus:outline-none focus:ring-2 focus:ring-black"/>
+                         class="w-full p-4 border-b border-black focus:outline-none focus:ring-2 focus:ring-black bg-transparant text-black "/>
               </div>
               
               <div>
                   <input type="text" name="phone" placeholder="Phone Number" 
-                         class="w-full p-4 border-b border-black focus:outline-none focus:ring-2 focus:ring-black"/>
+                         class="w-full p-4 border-b border-black focus:outline-none focus:ring-2 focus:ring-black bg-transparant text-black "/>
               </div>
               
               <div>
                   <textarea rows="3" name="message" placeholder="Your Message" required 
-                            class="w-full p-4 border-b border-black focus:outline-none focus:ring-2 focus:ring-black"></textarea>
+                            class="w-full p-4 border-b border-black focus:outline-none focus:ring-2 focus:ring-black bg-transparant text-black "></textarea>
               </div>
 
               <button type="submit" 
-                      class="bg-black text-white px-8 py-3 rounded-lg hover:bg-gray-800 transition-colors w-full sm:w-auto text-center">
+                      class="bg-black text-white px-8 py-3 rounded-lg hover:bg-gray-800 transition-colors w-full sm:w-auto text-center bg-transparant text-black ">
                   Send Message
               </button>
               
@@ -477,20 +477,20 @@
 <script>
         // Theme Toggle Functionality
         const themeToggle = document.getElementById('themeToggle');
-        const lightIcon = document.getElementById('lightIcon');
-        const darkIcon = document.getElementById('darkIcon');
-        const body = document.body;
+    const lightIcon = document.getElementById('lightIcon');
+    const darkIcon = document.getElementById('darkIcon');
+    const body = document.body;
         const projectHeader = document.querySelector('.projectHeader');
         const socialHeader = document.querySelector('#socialHeader');
         const Grps = document.querySelector('.group');
         const bgChange = document.querySelectorAll('.bg-white');
         const dotImage = document.getElementById('dotImage');
 
-        // Initialize theme
-        if (localStorage.getItem('theme') === 'dark') {
-            enableDarkMode();
-        } else {
+        // Initialize theme - Start with dark mode by default
+        if (localStorage.getItem('theme') === 'light') {
             enableLightMode();
+        } else {
+            enableDarkMode();  // This will be the default state
         }
 
         themeToggle.addEventListener('click', () => {
@@ -513,14 +513,14 @@
             bgChange.forEach((element) => {
               element.classList.remove('bg-white');
               element.style.backgroundColor = '#1a1a1a'
-              element.style.color = 'white';
+              element.style.color = '#f0f0f0';
             })
           }
           function projectHeaderLightMode() {
             dotImage.classList.remove('invisible')
             bgChange.forEach((element) => {
               element.classList.remove('bg-white');
-              element.style.backgroundColor = 'white'
+              element.style.backgroundColor = '#f0f0f0'
               element.style.color = 'black';
             })
           }

@@ -13,7 +13,7 @@ mobileMenu.addEventListener('click', (e) => {
     mobileMenu.classList.add('hidden');
   }
 });
-// Disable right click
+// // Disable right click
 document.addEventListener('contextmenu', (e) => {
   e.preventDefault();
   alert('please do not do this , contact me 🙂')
@@ -44,3 +44,16 @@ document.addEventListener('keydown', (e) => {
 console.log = function() {};
 console.warn = function() {};
 console.error = function() {};
+
+// Media query for mobile devices
+const checkMobileScreen = () => {
+  if (window.matchMedia("(max-width: 768px)").matches) {
+   alert('You may have bad experience on small screens ')
+  }
+};
+
+// Initial check
+checkMobileScreen();
+
+// Listen for screen size changes
+window.addEventListener('resize', checkMobileScreen);

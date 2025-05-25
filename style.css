@@ -1,4 +1,7 @@
 
+@media (max-width: 760px) {
+    
+}
 :root {
     --bg-color: #ffffff;
     --text-color: #1a1a1a;
@@ -40,7 +43,7 @@ body::before {
     animation: gridMovement 10s linear infinite ;
     z-index: -1;
     transform: perspective(900px) rotateX(60deg) translateZ(-300px) scale(5.5); 
-    animation: gridMovement 5s linear infinite;
+    animation: gridMovement 3s linear infinite;
 }
 
 /* Add this new rule */

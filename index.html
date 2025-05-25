@@ -548,6 +548,45 @@
 
  <!-- Then load your three.js script -->
  <script src="three.js"></script>
+<!-- Add this right after opening <body> tag -->
+<div id="loader" class="fixed inset-0 z-[9999] flex items-center justify-center bg-white dark:bg-[#1a1a1a] transition-opacity duration-500">
+    <div class="loader animate-spin rounded-full border-4 border-t-4 border-gray-200 dark:border-gray-600 h-12 w-12"></div>
+</div>
+
+<!-- Add this CSS to your style.css -->
+<style>
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    
+    .animate-spin {
+        animation: spin 1s linear infinite;
+    }
+    
+    /* Add border-t color transition */
+    .loader {
+        border-top-color: #3b82f6;
+    }
+    
+    .dark .loader {
+        border-top-color: #60a5fa;
+    }
+</style>
+
+<!-- Add this script before closing </body> -->
+<script>
+    window.addEventListener('load', () => {
+        const loader = document.getElementById('loader');
+        // Minimum display time for smooth transition (1.5 seconds)
+        setTimeout(() => {
+            loader.style.opacity = '0';
+            setTimeout(() => {
+                loader.style.display = 'none';
+            }, 500);
+        }, 2000);
+    });
+</script>
 </body>
 
 </html>

@@ -91,12 +91,7 @@
     
       <!-- Unique Styled Image -->
       <div class="md:w-1/2 w-full flex justify-center relative">
-        <div class="w-60 h-60 md:w-72 md:h-72 rounded-full overflow-hidden border-4 border-indigo-500 shadow-lg transform hover:scale-105 transition ">
-          <img src="./assets/vishal .jpg" alt="Vishal's photo" class="w-full h-full object-cover " />
-        </div>
-        <div class="absolute bottom-4 right-4 text-sm text-gray-500 italic hidden md:block">
-         
-        </div>
+        <div id="modelContainer" class="w-60 h-60 md:w-72 md:h-72 rounded-full overflow-hidden border-4 border-indigo-500 shadow-lg transform hover:scale-105 transition"></div>
       </div>
     </section>
     
@@ -407,12 +402,12 @@
     </div>
     <div class="timeDate font-bold text-sm">12-02-2025 [21:01]</div>
     </section>
+  
     
-      
   </main>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script src="./animation.js"></script>  
+   <script src="./animation.js"></script>  
   
   <script>
   gsap.registerPlugin(ScrollTrigger);
@@ -429,35 +424,32 @@
       scrub: true
     }
   });
-
-   var timing = ()=>{
+  var updateDateTime = () => {
       let d = new Date();
-      let hour = d.getHours();
-      let minute = d.getMinutes();
-      let second = d.getSeconds();
+      let hour = d.getHours().toString().padStart(2, '0');
+      let minute = d.getMinutes().toString().padStart(2, '0');
+      let second = d.getSeconds().toString().padStart(2, '0');
+      let time = `${hour}:${minute}:${second}`;
      
-      let time = `${hour < 10? '0'+hour : hour}:${minute < 10? '0'+minute : minute}:${second < 10? '0'+second : second}`;
-     document.querySelector('.timing').textContent = '['+time +']';
+      // Update timing display
+      const timingElement = document.querySelector('.timing');
+      if(timingElement) {
+        timingElement.textContent = `[${time}]`;
+      }
+      const timeDateElement = document.querySelector('.timeDate');
+      if(timeDateElement) {
+        let day = d.getDate().toString().padStart(2, '0');
+        let month = (d.getMonth() + 1).toString().padStart(2, '0');
+        let year = d.getFullYear();
+        timeDateElement.textContent = `${day}-${month}-${year} [${time}]`;
+      }
     }
-    var timeDate = ()=>{
-      let d = new Date();
-      let hour = d.getHours();
-      let minute = d.getMinutes();
-      let second = d.getSeconds();
-     
-      let time = `${hour < 10? '0'+hour : hour}:${minute < 10? '0'+minute : minute}:${second < 10? '0'+second : second}`;
-     document.querySelector('.timing').textContent = '['+time +']';
-     let day = d.getDate();
-     let month = d.getMonth();
-     let year = d.getFullYear();
-
-     let date = day + '-' + month + '-' + year
-     document.querySelector('.timeDate').textContent = date +' ' + '[' + time + ']';
-    }
-    setInterval(()=>{
-      timeDate();
-      timing();
-    },1000)
+    
+  
+   setInterval(() => {
+      updateDateTime();
+    }, 1000);
+// ... existin
   </script>
 
 <button id="topButton" class="fixed bottom-8 right-6 p-4 text-white rounded-full opacity-0 transition-all duration-300 hover:scale-110 hover:bg-gray-400 shadow-xl bg-gray-200 ">
@@ -549,7 +541,11 @@
             localStorage.setItem('theme', 'light');
         }
     </script>
-    <script src="script.js"></script>
+    
+  <script src="script.js"></script> 
+
+
+
 </body>
 
 </html>

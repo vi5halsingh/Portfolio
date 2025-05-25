@@ -18,8 +18,8 @@ body {
 body::before {
     content: '';
     position: fixed;
-    top: -100%;
-    left: -50%;
+    top: -50%;
+    left: -100%;
     width: 200%;
     height: 200%;
     background: 
@@ -35,14 +35,15 @@ body::before {
             var(--grid-color) 20px,
             var(--grid-color) 20px
         );
-    transform: perspective(600px) rotateX(60deg) translateZ(-100px);
-    animation: gridMovement 2s linear infinite;
+        background-repeat: repeat;
+    transform: perspective(900px) rotateX(60deg) translateZ(-1000px);
+    animation: gridMovement 10s linear infinite ;
     z-index: -1;
 }
 
 @keyframes gridMovement {
-    from { transform: perspective(600px) rotateX(60deg) translateZ(-100px) translateY(0); }
-    to { transform: perspective(600px) rotateX(60deg) translateZ(-100px) translateY(20px); }
+    from { transform: perspective(900px) rotateX(60deg) translateZ(-300px) translateY(0); }
+    to { transform: perspective(900px) rotateX(60deg) translateZ(-300px) translateY(1000px); }
 }
 
 .dark-theme {

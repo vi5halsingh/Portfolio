@@ -14,10 +14,10 @@ mobileMenu.addEventListener('click', (e) => {
   }
 });
 // // Disable right click
-document.addEventListener('contextmenu', (e) => {
-  e.preventDefault();
-  alert('please do not do this , contact me 🙂')
-});
+// document.addEventListener('contextmenu', (e) => {
+//   e.preventDefault();
+//   alert('please do not do this , contact me 🙂')
+// });
 
 // Disable various keyboard shortcuts and dev tools
 document.addEventListener('keydown', (e) => {
@@ -57,3 +57,4 @@ checkMobileScreen();
 
 // Listen for screen size changes
 window.addEventListener('resize', checkMobileScreen);
+

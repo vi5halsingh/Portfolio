@@ -13,11 +13,11 @@ mobileMenu.addEventListener('click', (e) => {
     mobileMenu.classList.add('hidden');
   }
 });
-// // Disable right click
-// document.addEventListener('contextmenu', (e) => {
-//   e.preventDefault();
-//   alert('please do not do this , contact me 🙂')
-// });
+// Disable right click
+document.addEventListener('contextmenu', (e) => {
+  e.preventDefault();
+  alert('please do not do this , contact me 🙂')
+});
 
 // Disable various keyboard shortcuts and dev tools
 document.addEventListener('keydown', (e) => {
@@ -58,3 +58,13 @@ checkMobileScreen();
 // Listen for screen size changes
 window.addEventListener('resize', checkMobileScreen);
 
+const projectdiv = document.querySelectorAll('.projectdiv')
+projectdiv.forEach(element => {
+   element.addEventListener('mouseover',(e)=>{
+    element.querySelector('.projectHeader img').style.height = '25vh'
+  })
+  element.addEventListener('mouseout',(e)=>{
+    element.querySelector('.projectHeader img').style.height = ''
+  })
+
+});

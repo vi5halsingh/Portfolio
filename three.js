@@ -40,26 +40,34 @@
  });
  let targetRotationX = 0;
  let targetRotationY = 0;
+ let currentRotationX = 0;
+ let currentRotationY = 0;
 
  container.addEventListener('mousemove', (e) => {
-    const x = (e.clientX / container.offsetWidth) * 0.3
-    const y = (e.clientY / container.offsetHeight) * 0.3
-
-    targetRotationY = x ;
-    targetRotationX = y ;
+    const rect = container.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width;
+    const y = (e.clientY - rect.top) / rect.height;
+    // Map x/y from 0-1 to -0.5 to 0.5, then scale for effect
+    targetRotationY = (x - 0.5) * Math.PI * 0.5; // left/right
+    targetRotationX = (y - 0.5) * Math.PI * 0.5; // up/down
 });
+
+// Reset rotation when mouse leaves the container
+container.addEventListener('mouseleave', () => {
+    targetRotationX = 0;
+    targetRotationY = 0;
+});
+
  // Animation loop
  function animate() {
     requestAnimationFrame(animate);
-
     if (model) {
-        // Only rotate on mouse move
-        // if (targetRotationY !== 0 || targetRotationX !== 0) {
-        //     model.rotation.y += (targetRotationY - model.rotation.y) * 0.02;
-        //     model.rotation.x += (targetRotationX - model.rotation.x) * 0.02;
-        // }
+        // Smoothly interpolate rotation
+        currentRotationY += (targetRotationY - currentRotationY) * 0.08;
+        currentRotationX += (targetRotationX - currentRotationX) * 0.08;
+        model.rotation.y = currentRotationY - Math.PI/2; // keep initial -90deg offset
+        model.rotation.x = currentRotationX;
     }
-
     renderer.render(scene, camera);
 }
 animate();

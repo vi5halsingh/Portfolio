@@ -16,6 +16,8 @@ body {
     background: var(--bg-color);
     color: var(--text-color);
     font-family: Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 body::before {

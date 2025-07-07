@@ -46,17 +46,17 @@ console.warn = function() {};
 console.error = function() {};
 
 // Media query for mobile devices
-const checkMobileScreen = () => {
-  if (window.matchMedia("(max-width: 768px)").matches) {
-   alert('You may have bad experience on small screens ')
-  }
-};
+// const checkMobileScreen = () => {
+//   if (window.matchMedia("(max-width: 768px)").matches) {
+//    alert('You may have bad experience on small screens ')
+//   }
+// };
 
 // Initial check
-checkMobileScreen();
+// checkMobileScreen();
 
 // Listen for screen size changes
-window.addEventListener('resize', checkMobileScreen);
+// window.addEventListener('resize', checkMobileScreen);
 
 const projectdiv = document.querySelectorAll('.projectdiv')
 projectdiv.forEach(element => {

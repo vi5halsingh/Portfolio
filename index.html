@@ -13,53 +13,69 @@
     body {
       font-family: Helvetica, sans-serif;
     }
-        html {
-            scroll-behavior: smooth;
-        }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     /* Loader styles moved from bottom */
     @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
     }
+
     .animate-spin {
-        animation: spin 1s linear infinite;
+      animation: spin 1s linear infinite;
     }
+
     .loader {
-        border-top-color: #3b82f6;
+      border-top-color: #3b82f6;
 
     }
+
     .dark .loader {
-        border-top-color: #60a5fa;
+      border-top-color: #60a5fa;
     }
   </style>
 </head>
- 
+
 <body>
-  <div id="loader" class=" fixed inset-0 z-[9999] flex items-center justify-center bg-white dark:bg-[#1a1a1a] transition-opacity duration-500">
-    <div class="loader animate-spin rounded-full border-4 border-t-4 border-gray-200 dark:border-gray-600 h-12 w-12"></div>
+  <div id="loader"
+    class=" fixed inset-0 z-[9999] flex items-center justify-center bg-white dark:bg-[#1a1a1a] transition-opacity duration-500">
+    <div class="loader animate-spin rounded-full border-4 border-t-4 border-gray-200 dark:border-gray-600 h-12 w-12">
+    </div>
   </div>
   <main class=" w-full min-h-screen  py-8 ">
     <nav class="flex justify-between items-center p-2 md:mx-20">
-      
-      <h1 class="text-xl flex justify-center items-center  gap-8 font-bold"><a href="index.html" class="hover:opacity-30">Vi5hal</a>
-        <button id="themeToggle" class="hidden p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
-        <div class="links flex gap-4 items-center">
+
+      <h1 class="text-xl flex justify-center items-center  gap-8 font-bold"><a href="index.html"
+          class="hover:opacity-30">Vi5hal</a>
+        <button id="themeToggle"
+          class="hidden p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+          <div class="links flex gap-4 items-center">
             <!-- Theme Toggle Button -->
-              <svg class="w-6 h-6 hidden" id="lightIcon" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 18c-3.309 0-6-2.691-6-6s2.691-6 6-6 6 2.691 6 6-2.691 6-6 6zm0-10v8c2.206 0 4-1.794 4-4s-1.794-4-4-4z"/>
-              </svg>
-              <svg class="w-6 h-6 hidden" id="darkIcon" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 11.807A9.002 9.002 0 0 1 10.049 2a9.942 9.942 0 0 0-5.12 2.735c-3.905 3.905-3.905 10.237 0 14.142 3.906 3.906 10.237 3.905 14.143 0a9.946 9.946 0 0 0 2.735-5.119A9.004 9.004 0 0 1 12 11.807z"/>
-              </svg>
-          </button>
+            <svg class="w-6 h-6 hidden" id="lightIcon" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 18c-3.309 0-6-2.691-6-6s2.691-6 6-6 6 2.691 6 6-2.691 6-6 6zm0-10v8c2.206 0 4-1.794 4-4s-1.794-4-4-4z" />
+            </svg>
+            <svg class="w-6 h-6 hidden" id="darkIcon" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 11.807A9.002 9.002 0 0 1 10.049 2a9.942 9.942 0 0 0-5.12 2.735c-3.905 3.905-3.905 10.237 0 14.142 3.906 3.906 10.237 3.905 14.143 0a9.946 9.946 0 0 0 2.735-5.119A9.004 9.004 0 0 1 12 11.807z" />
+            </svg>
+        </button>
       </h1>
       <button id="mobileMenuButton" class="md:hidden p-2">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
 
-        <!-- Desktop Navigation -->
+      <!-- Desktop Navigation -->
       <div class="links hidden md:flex gap-4">
         <!-- <a href="#home" class="link font-medium text-lg">Home</a> -->
         <a href="#contact" class="link font-medium text-lg opacity-30 hover:opacity-100">Hire Me</a>
@@ -68,16 +84,17 @@
         <a href="#socials" class="link font-medium text-lg opacity-30 hover:opacity-100">Socials</a>
         <a href="#gallery" class="link font-medium text-lg opacity-30 hover:opacity-100">Gallery</a>
         <!-- Add Download Resume Button -->
-        <a href="https://drive.google.com/file/d/1Jk237RFtmh6XD32r07WSz0W77YZSwya6/view" download 
-           class="ml-4  border-black border-2 rounded-lg  rounded text-lg text-gray-500 hover:text-white hover:border-white px-2 ">
-           Resume
+        <a href="https://drive.google.com/file/d/13fDxDoR9kZiA2nu4LPOPvu5RkEuK9zSM/view?usp=sharing" download
+          class="ml-4  border-black border-2 rounded-lg  rounded text-lg text-gray-500 hover:text-white hover:border-white px-2 ">
+          Resume
         </a>
       </div>
     </nav>
-      <div id="mobileMenu" class="hidden fixed inset-0 bg-white bg-white/95 z-50 flex flex-col items-center justify-center space-y-6">
+    <div id="mobileMenu"
+      class="hidden fixed inset-0 bg-white bg-white/95 z-50 flex flex-col items-center justify-center space-y-6">
       <button id="closeMenuButton" class="absolute top-4 right-4 p-2">
         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
         </svg>
       </button>
       <a href="#home" class="text-2xl">Home</a>
@@ -86,8 +103,9 @@
       <a href="#socials" class="text-2xl">Socials</a>
       <a href="#gallery" class="text-2xl">Gallery</a>
       <a href="#contact" class="text-2xl">Hire Me</a>
-      <a href="https://drive.google.com/file/d/1Jk237RFtmh6XD32r07WSz0W77YZSwya6/view" download class="text-2xl border-b-2 border-black">
-         Resume
+      <a href="https://drive.google.com/file/d/1Jk237RFtmh6XD32r07WSz0W77YZSwya6/view" download
+        class="text-2xl border-b-2 border-black">
+        Resume
       </a>
     </div>
     <section id="home" class="w-full md:mt-24 md:px-20 flex flex-col md:flex-row justify-between items-center">
@@ -102,411 +120,504 @@
           "Let's build something amazing."
         </p>
         <div class="mt-6 flex space-x-4">
-          <a href="#projects" class="px-5 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition">View Projects</a>
-          <a href="#contact" class="px-5 py-2 border border-black rounded-lg hover:bg-black hover:text-white transition">Give FeedBack</a>
+          <a href="#projects" class="px-5 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition">View
+            Projects</a>
+          <a href="#contact"
+            class="px-5 py-2 border border-black rounded-lg hover:bg-black hover:text-white transition">Give
+            FeedBack</a>
         </div>
       </div>
-    
+
       <!-- Unique Styled Image -->
       <div class="md:w-1/2 w-full flex justify-center relative">
-        <div id="modelContainer" class="w-60 h-60 md:w-72 md:h-72 rounded-full overflow-hidden border-4 border-indigo-500 shadow-lg transform transition"></div>
+        <div id="modelContainer"
+          class="w-60 h-60 md:w-72 md:h-72 rounded-full overflow-hidden border-4 border-indigo-500 shadow-lg transform transition">
+        </div>
       </div>
     </section>
-    
-  
-  </section>
-  <section class="px-5 md:px-20 item-3 md:w-[80%] ml-auto mr-auto">
-    <div class="firstHading flex justify-between items-end mt-[10rem] py-5 w-[100%] ml-auto mr-auto">
+
+
+    </section>
+    <section class="px-5 md:px-20 item-3 md:w-[80%] ml-auto mr-auto">
+      <div class="firstHading flex justify-between items-end mt-[10rem] py-5 w-[100%] ml-auto mr-auto">
         <img src="./assets/visual-studio-code.png" alt="" class="w-[70px] h-[70px] -rotate-45 ">
         <h1 class="font-bold md:text-4xl"> [ I Design & build Experience ]</h1>
         <img src="./assets/html.png" alt="" class="w-[70px] h-[70px] -rotate-45 ">
-    </div>
-    <div class="midcontent flex flex-col text-center">
+      </div>
+      <div class="midcontent flex flex-col text-center">
         <p class="md:w-[80%] mx-auto font-sans md:font-medium">
-          A MERN stack explorer bridging powerful back-end logic with sleek front-end magic—where MongoDB mysteries, React riddles, and Node.js quests await. From building scalable APIs to mastering UI finesse, the full-stack journey is a fusion of problem-solving, creativity, and relentless debugging!
+          A MERN stack explorer bridging powerful back-end logic with sleek front-end magic—where MongoDB mysteries,
+          React riddles, and Node.js quests await. From building scalable APIs to mastering UI finesse, the full-stack
+          journey is a fusion of problem-solving, creativity, and relentless debugging!
         </p>
         <div class="images flex justify-between items-center w-[50%] mx-auto mt-6">
-            <img src="./assets/css.png" alt="" class="w-[70px] h-[70px] rounded-md rotate-45">
-            <img src="./assets/javascript.png" alt="" class="w-[70px] h-[70px] rounded-md rotate-45">
+          <img src="./assets/css.png" alt="" class="w-[70px] h-[70px] rounded-md rotate-45">
+          <img src="./assets/javascript.png" alt="" class="w-[70px] h-[70px] rounded-md rotate-45">
         </div>
-    </div>
-</section>
-<section id="projects" class=" md:px-20 w-full py-5 md:mt-[10rem] relative ">
-  <div id="" class="projectHeader flex w-full justify-start items-center sticky top-0 z-10 bg-white">
+      </div>
+    </section>
+    <section id="projects" class=" md:px-20 w-full py-5 md:mt-[10rem] relative ">
+      <div id="" class="projectHeader flex w-full justify-start items-center sticky top-0 z-10 bg-white">
 
-    <h1 id="project-header" class="text-6xl font-medium tracking-tighter">2025.</h1>
-    <div class=" border-t border-black mx-2 w-20  opacity-30 "></div>
-    <h2 class="text-6xl font-bold opacity-30">The Escalation </h2>
-</div>
-<!-- first row -->
-<div id="2025-content" class=" flex flex-col md:flex-row   w-full  gap-4  ">
+        <h1 id="project-header" class="text-6xl font-medium tracking-tighter">2025.</h1>
+        <div class=" border-t border-black mx-2 w-20  opacity-30 "></div>
+        <h2 class="text-6xl font-bold opacity-30">The Escalation </h2>
+      </div>
+      <!-- first row -->
+      <div id="2025-content" class=" flex flex-col md:flex-row   w-full  gap-4  ">
 
-  <div class=" p-5 flex flex-col flex-row gap-5 md:w-1/3 w-full   ">
-    <div class="projectdiv group md:w-full w-full md:max-w-sm border border-black rounded-xl shadow-lg shadow-black overflow-hidden ">
-      <!-- Image Container -->
-      <div class="projectHeader group relative p-4 pt-6 ">
-        <img src="./assets/vos.png" alt="Project" class="w-full h-0  object-cover rounded-lg border border-black" />
-      </div> 
-      <!-- Description -->
-      <h3 class="text-lg font-semibold mb-1 ml-4 text-center w-full">vOS</h3>
-      <div class="px-4 pb-6 flex gap-2 w-full">
-        <a href="https://github.com/vi5halsingh/Vos" target="_blank" class="px-2 opacity-30  rounded hover:opacity-100 transition border text-1em text-center w-1/2">
-          Github link
-        </a>
-        <a href="https://v-os.netlify.app/" target="_blank" class="px-2 opacity-30  rounded hover:opacity-100 transition border text-1em text-center w-1/2">
-         Live
-        </a>
-      </div>
-    </div> 
-     
- 
-    <div class="projectdiv group md:w-full w-full md:max-w-sm border border-black rounded-xl shadow-lg shadow-black overflow-hidden ">
-      <!-- Image Container -->
-      <div class="projectHeader group relative p-4 pt-6 ">
-        <img src="./assets/projects/Screenshot 2025-05-09 105201.png" alt="Project" class="w-full h-0 object-cover rounded-lg border border-black" />
-      </div>
-    
-      <!-- Description -->
-      <h3 class="text-lg font-semibold mb-1 ml-4 text-center w-full">Portfolio</h3>
-      <div class="px-4 pb-6 flex gap-2 w-full">
-        <a href="https://vi5halsingh.github.io/Portfolio/" target="_blank" class="px-2 opacity-30  rounded hover:opacity-100 transition border text-1em text-center w-1/2">
-          Github link
-        </a>
-        <a href="https://vi5hal.vercel.app/" target="_blank" class="px-2 opacity-30  rounded hover:opacity-100 transition border text-1em text-center w-1/2">
-         Live
-        </a>
-      </div>
-    </div>  
-  
-    <div class="projectdiv group md:w-full w-full md:max-w-sm border border-black rounded-xl shadow-lg shadow-black overflow-hidden ">
-      <!-- Image Container -->
-      <div class="projectHeader group relative p-4 pt-6 ">
-        <img src="./assets//projects/e-opd.png" alt="Project" class="w-full h-0 object-cover rounded-lg border border-black" />
-      </div>
-    
-      <!-- Description -->
-      <h3 class="text-lg font-semibold mb-1 ml-4 text-center w-full">e-OPD</h3>
-      <div class="px-4 pb-6 flex gap-2 w-full">
-        <a href="https://e-opd.onrender.com/" target="_blank" class="px-2 opacity-30  rounded hover:opacity-100 transition border text-1em text-center w-1/2">
-          Github link
-        </a>
-        <a href="https://e-opd.onrender.com/" target="_blank" class="px-2 opacity-30  rounded hover:opacity-100 transition border text-1em text-center w-1/2">
-         Live
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- row no 2  -->
-  <div class="flex-col gap-5 md:w-1/3 w-full py-5">
-    <!-- Project Card (First Div) -->
-      <div class="projectdiv group md:w-full w-full md:max-w-sm border border-black rounded-xl shadow-lg shadow-black overflow-hidden ">
-      <!-- Image Container -->
-      <div class="projectHeader group relative p-4 pt-6 ">
-        <img src="./assets/icons/logo.svg" alt="Project" class="w-full h-0  object-cover rounded-lg border border-black" />
-      </div> 
-      <!-- Description -->
-      <h3 class="text-lg font-semibold mb-1 ml-4 text-center w-full">Veda-AI</h3>
-      <div class="px-4 pb-6 flex gap-2 w-full">
-        <a href="https://github.com/vi5halsingh/Veda" target="_blank" class="px-2 opacity-30  rounded hover:opacity-100 transition border text-1em text-center w-1/2">
-          Github link
-        </a>
-        <a href="https://veda-kx60.onrender.com" target="_blank" class="px-2 opacity-30  rounded hover:opacity-100 transition border text-1em text-center w-1/2">
-         Live
-        </a>
-      </div>
-    </div> 
+        <div class=" p-5 flex flex-col flex-row gap-5 md:w-1/3 w-full   ">
+          <div
+            class="projectdiv group md:w-full w-full md:max-w-sm border border-black rounded-xl shadow-lg shadow-black overflow-hidden ">
+            <!-- Image Container -->
+            <div class="projectHeader group relative p-4 pt-6 ">
+              <img src="./assets/vos.png" alt="Project"
+                class="w-full h-0  object-cover rounded-lg border border-black" />
+            </div>
+            <!-- Description -->
+            <h3 class="text-lg font-semibold mb-1 ml-4 text-center w-full">vOS</h3>
+            <div class="px-4 pb-6 flex gap-2 w-full">
+              <a href="https://github.com/vi5halsingh/Vos" target="_blank"
+                class="px-2 opacity-30  rounded hover:opacity-100 transition border text-1em text-center w-1/2">
+                Github link
+              </a>
+              <a href="https://v-os.netlify.app/" target="_blank"
+                class="px-2 opacity-30  rounded hover:opacity-100 transition border text-1em text-center w-1/2">
+                Live
+              </a>
+            </div>
+          </div>
 
 
-    <div class="projectdiv group md:w-full w-full md:max-w-sm border border-black rounded-xl shadow-lg shadow-black overflow-hidden ">
-      <!-- Image Container -->
-      <div class="projectHeader group relative p-4 pt-6 ">
-        <img src="./assets/projects/platour.png" alt="Project" class="w-full h-0 object-cover rounded-lg border border-black" />
-      </div>
-    
-      <!-- Description -->
-      <h3 class="text-lg font-semibold mb-1 ml-4 text-center w-full">PLATOUR</h3>
-      <div class="px-4 pb-6 flex gap-2 w-full">
-        <a href="https://platour-nu.vercel.app/" target="_blank" class="px-2 opacity-30  rounded hover:opacity-100 transition border text-1em text-center w-1/2">
-          Github link
-        </a>
-        <a href="https://platour-nu.vercel.app/" target="_blank" class="px-2 opacity-30  rounded hover:opacity-100 transition border text-1em text-center w-1/2">
-         Live
-        </a>
-      </div>
-    </div>
-    
-  
-    <!-- Second Plain Div -->
+          <div
+            class="projectdiv group md:w-full w-full md:max-w-sm border border-black rounded-xl shadow-lg shadow-black overflow-hidden ">
+            <!-- Image Container -->
+            <div class="projectHeader group relative p-4 pt-6 ">
+              <img src="./assets/projects/Screenshot 2025-05-09 105201.png" alt="Project"
+                class="w-full h-0 object-cover rounded-lg border border-black" />
+            </div>
 
-    <div class="projectdiv group md:w-full w-full md:max-w-sm border border-black rounded-xl shadow-lg shadow-black overflow-hidden mt-5">
-      <!-- Image Container -->
-      <div class="projectHeader group relative p-4 pt-6 ">
-        <img src="./assets/projects/fetch github.png" alt="Project" class="w-full h-0 object-cover rounded-lg border border-black" />
-      </div>
-    
-      <!-- Description -->
-      <h3 class="text-lg font-semibold mb-1 ml-4 text-center w-full">Github profile fetcher</h3>
-      <div class="px-4 pb-6 flex gap-2 w-full">
-        <a href="https://vi5halsingh.github.io/fetch-github-profile/" target="_blank" class="px-2 opacity-30  rounded hover:opacity-100 transition border text-1em text-center w-1/2">
-          Github link
-        </a>
-        <a href="https://vi5halsingh.github.io/fetch-github-profile/" target="_blank" class="px-2 opacity-30  rounded hover:opacity-100 transition border text-1em text-center w-1/2">
-         Live
-        </a>
-      </div>
-    </div>  
-  </div>
-  <!-- row no 3 -->
-  <div class="flex-col gap-5 md:w-1/3 w-full py-[1rem]"> 
-    <div class="projectdiv group md:w-full w-full md:max-w-sm border border-black rounded-xl shadow-lg shadow-black overflow-hidden ">
-      <!-- Image Container -->
-      <div class="projectHeader group relative p-4 pt-6 ">
-        <img src="./assets/projects/bg.png" alt="Project" class="w-full h-0 object-cover rounded-lg border border-black" />
-      </div>
-    
-      <!-- Description -->
-      <h3 class="text-lg font-semibold mb-1 ml-4 text-center w-full">Mahabharat Website</h3>
-      <div class="px-4 pb-6 flex gap-2 w-full">
-        <a href="https://github.com/vi5halsingh/SkillsVarz-2nd" target="_blank" class="px-2 opacity-30  rounded hover:opacity-100 transition border text-1em text-center w-1/2">
-          Github link
-        </a>
-        <a href="https://github.com/vi5halsingh/SkillsVarz-2nd" target="_blank" class="px-2 opacity-30  rounded hover:opacity-100 transition border text-1em text-center w-1/2">
-         Live
-        </a>
-      </div>
-    </div>
-    
+            <!-- Description -->
+            <h3 class="text-lg font-semibold mb-1 ml-4 text-center w-full">Portfolio</h3>
+            <div class="px-4 pb-6 flex gap-2 w-full">
+              <a href="https://vi5halsingh.github.io/Portfolio/" target="_blank"
+                class="px-2 opacity-30  rounded hover:opacity-100 transition border text-1em text-center w-1/2">
+                Github link
+              </a>
+              <a href="https://vi5hal.vercel.app/" target="_blank"
+                class="px-2 opacity-30  rounded hover:opacity-100 transition border text-1em text-center w-1/2">
+                Live
+              </a>
+            </div>
+          </div>
 
-    <!-- Project Card (second Div) -->
+          <div
+            class="projectdiv group md:w-full w-full md:max-w-sm border border-black rounded-xl shadow-lg shadow-black overflow-hidden ">
+            <!-- Image Container -->
+            <div class="projectHeader group relative p-4 pt-6 ">
+              <img src="./assets//projects/e-opd.png" alt="Project"
+                class="w-full h-0 object-cover rounded-lg border border-black" />
+            </div>
 
-<div class="projectdiv group md:w-full w-full md:max-w-sm border border-black rounded-xl shadow-lg shadow-black overflow-hidden mt-5">
-      <!-- Image Container -->
-      <div class="projectHeader group relative p-4 pt-6 ">
-        <img src="./assets/projects/khata-book.png" alt="Project" class="w-full h-0 object-cover rounded-lg border border-black" />
+            <!-- Description -->
+            <h3 class="text-lg font-semibold mb-1 ml-4 text-center w-full">e-OPD</h3>
+            <div class="px-4 pb-6 flex gap-2 w-full">
+              <a href="https://e-opd.onrender.com/" target="_blank"
+                class="px-2 opacity-30  rounded hover:opacity-100 transition border text-1em text-center w-1/2">
+                Github link
+              </a>
+              <a href="https://e-opd.onrender.com/" target="_blank"
+                class="px-2 opacity-30  rounded hover:opacity-100 transition border text-1em text-center w-1/2">
+                Live
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- row no 2  -->
+        <div class="flex-col gap-5 md:w-1/3 w-full py-5">
+          <!-- Project Card (First Div) -->
+          <div
+            class="projectdiv group md:w-full w-full md:max-w-sm border border-black rounded-xl shadow-lg shadow-black overflow-hidden ">
+            <!-- Image Container -->
+            <div class="projectHeader group relative p-4 pt-6 ">
+              <img src="./assets/icons/logo.svg" alt="Project"
+                class="w-full h-0  object-cover rounded-lg border border-black" />
+            </div>
+            <!-- Description -->
+            <h3 class="text-lg font-semibold mb-1 ml-4 text-center w-full">Veda-AI</h3>
+            <div class="px-4 pb-6 flex gap-2 w-full">
+              <a href="https://github.com/vi5halsingh/Veda" target="_blank"
+                class="px-2 opacity-30  rounded hover:opacity-100 transition border text-1em text-center w-1/2">
+                Github link
+              </a>
+              <a href="https://veda-kx60.onrender.com" target="_blank"
+                class="px-2 opacity-30  rounded hover:opacity-100 transition border text-1em text-center w-1/2">
+                Live
+              </a>
+            </div>
+          </div>
+
+
+          <div
+            class="projectdiv group md:w-full w-full md:max-w-sm border border-black rounded-xl shadow-lg shadow-black overflow-hidden ">
+            <!-- Image Container -->
+            <div class="projectHeader group relative p-4 pt-6 ">
+              <img src="./assets/projects/platour.png" alt="Project"
+                class="w-full h-0 object-cover rounded-lg border border-black" />
+            </div>
+
+            <!-- Description -->
+            <h3 class="text-lg font-semibold mb-1 ml-4 text-center w-full">PLATOUR</h3>
+            <div class="px-4 pb-6 flex gap-2 w-full">
+              <a href="https://platour-nu.vercel.app/" target="_blank"
+                class="px-2 opacity-30  rounded hover:opacity-100 transition border text-1em text-center w-1/2">
+                Github link
+              </a>
+              <a href="https://platour-nu.vercel.app/" target="_blank"
+                class="px-2 opacity-30  rounded hover:opacity-100 transition border text-1em text-center w-1/2">
+                Live
+              </a>
+            </div>
+          </div>
+
+
+          <!-- Second Plain Div -->
+
+          <div
+            class="projectdiv group md:w-full w-full md:max-w-sm border border-black rounded-xl shadow-lg shadow-black overflow-hidden mt-5">
+            <!-- Image Container -->
+            <div class="projectHeader group relative p-4 pt-6 ">
+              <img src="./assets/projects/fetch github.png" alt="Project"
+                class="w-full h-0 object-cover rounded-lg border border-black" />
+            </div>
+
+            <!-- Description -->
+            <h3 class="text-lg font-semibold mb-1 ml-4 text-center w-full">Github profile fetcher</h3>
+            <div class="px-4 pb-6 flex gap-2 w-full">
+              <a href="https://vi5halsingh.github.io/fetch-github-profile/" target="_blank"
+                class="px-2 opacity-30  rounded hover:opacity-100 transition border text-1em text-center w-1/2">
+                Github link
+              </a>
+              <a href="https://vi5halsingh.github.io/fetch-github-profile/" target="_blank"
+                class="px-2 opacity-30  rounded hover:opacity-100 transition border text-1em text-center w-1/2">
+                Live
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- row no 3 -->
+        <div class="flex-col gap-5 md:w-1/3 w-full py-[1rem]">
+          <div
+            class="projectdiv group md:w-full w-full md:max-w-sm border border-black rounded-xl shadow-lg shadow-black overflow-hidden ">
+            <!-- Image Container -->
+            <div class="projectHeader group relative p-4 pt-6 ">
+              <img src="./assets/projects/bg.png" alt="Project"
+                class="w-full h-0 object-cover rounded-lg border border-black" />
+            </div>
+
+            <!-- Description -->
+            <h3 class="text-lg font-semibold mb-1 ml-4 text-center w-full">Mahabharat Website</h3>
+            <div class="px-4 pb-6 flex gap-2 w-full">
+              <a href="https://github.com/vi5halsingh/SkillsVarz-2nd" target="_blank"
+                class="px-2 opacity-30  rounded hover:opacity-100 transition border text-1em text-center w-1/2">
+                Github link
+              </a>
+              <a href="https://github.com/vi5halsingh/SkillsVarz-2nd" target="_blank"
+                class="px-2 opacity-30  rounded hover:opacity-100 transition border text-1em text-center w-1/2">
+                Live
+              </a>
+            </div>
+          </div>
+
+
+          <!-- Project Card (second Div) -->
+
+          <div
+            class="projectdiv group md:w-full w-full md:max-w-sm border border-black rounded-xl shadow-lg shadow-black overflow-hidden mt-5">
+            <!-- Image Container -->
+            <div class="projectHeader group relative p-4 pt-6 ">
+              <img src="./assets/projects/khata-book.png" alt="Project"
+                class="w-full h-0 object-cover rounded-lg border border-black" />
+            </div>
+
+            <!-- Description -->
+            <h3 class="text-lg font-semibold mb-1 ml-4 text-center w-full">khata-book</h3>
+            <div class="px-4 pb-6 flex gap-2 w-full">
+              <a href="https://khata-book-lime.vercel.app/" target="_blank"
+                class="px-2 opacity-30  rounded hover:opacity-100 transition border text-1em text-center w-1/2">
+                Github link
+              </a>
+              <a href="https://khata-book-lime.vercel.app/" target="_blank"
+                class="px-2 opacity-30  rounded hover:opacity-100 transition border text-1em text-center w-1/2">
+                Live
+              </a>
+            </div>
+          </div>
+        </div>
+
+
       </div>
-    
-      <!-- Description -->
-      <h3 class="text-lg font-semibold mb-1 ml-4 text-center w-full">khata-book</h3>
-      <div class="px-4 pb-6 flex gap-2 w-full">
-        <a href="https://khata-book-lime.vercel.app/" target="_blank" class="px-2 opacity-30  rounded hover:opacity-100 transition border text-1em text-center w-1/2">
-          Github link
-        </a>
-        <a href="https://khata-book-lime.vercel.app/" target="_blank" class="px-2 opacity-30  rounded hover:opacity-100 transition border text-1em text-center w-1/2">
-         Live
-        </a>
+    </section>
+    <section id="skills" class=" imagecontent md:px-20 md:w-full mt-[10rem] relative ">
+      <div class="projectHeader flex md:w-full justify-start items-center sticky top-0 z-10 bg-white">
+        <h1 class="text-6xl font-medium tracking-tighter">Skills.</h1>
+        <div class=" border-t border-black mx-2 w-20  opacity-30 "></div>
+        <h2 class="text-6xl font-bold opacity-30">Let's Begin 💪 </h2>
       </div>
-    </div>
-  </div>
 
-  
-</div>
-</section>
-<section id="skills" class=" imagecontent md:px-20 md:w-full mt-[10rem] relative ">
-   <div class="projectHeader flex md:w-full justify-start items-center sticky top-0 z-10 bg-white">
-    <h1 class="text-6xl font-medium tracking-tighter">Skills.</h1>
-    <div class=" border-t border-black mx-2 w-20  opacity-30 "></div>
-    <h2 class="text-6xl font-bold opacity-30">Let's Begin 💪 </h2>
-</div>
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-white text-2xl md:text-3xl font-mono font-bold mb-8 flex items-center gap-2">
+          <!-- <span>1.</span> <span>_skills</span> <span class="text-yellow-400"></span> -->
+        </h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+          <div
+            class="flex items-center gap-2 rounded px-4 py-3  border-2 rounded-lg  rounded text-lg text-gray-500 opacity-40 hover:text-white hover:opacity-100  px-2">
+            <img src="./assets/javascript.png" alt="Ethereum" class="w-6 h-6" />
+            <span class="font-bold text-white ">JavaScript</span>
+          </div>
+          <div
+            class="flex items-center gap-2 rounded px-4 py-3  border-2 rounded-lg  rounded text-lg text-gray-500 opacity-40 hover:text-white hover:opacity-100  px-2">
+            <img src="./assets/html.png" alt="Ethereum" class="w-6 h-6" />
+            <span class="font-bold text-white ">HTML</span>
+          </div>
+          <div
+            class="flex items-center gap-2 rounded px-4 py-3  border-2 rounded-lg  rounded text-lg text-gray-500 opacity-40 hover:text-white hover:opacity-100  px-2">
+            <img src="./assets/css.png" alt="Ethereum" class="w-6 h-6" />
+            <span class="font-bold text-white ">CSS</span>
+          </div>
+          <div
+            class="flex items-center gap-2 rounded px-4 py-3  border-2 rounded-lg  rounded text-lg text-gray-500 opacity-40 hover:text-white hover:opacity-100  px-2">
+            <img src="./assets/icons/node.svg" alt="Ethereum" class="w-6 h-6" />
+            <span class="font-bold text-white ">SCSS</span>
+          </div>
+          <div
+            class="flex items-center gap-2 rounded px-4 py-3  border-2 rounded-lg  rounded text-lg text-gray-500 opacity-40 hover:text-white hover:opacity-100  px-2">
+            <img src="./assets/icons/react.png" alt="Ethereum" class="w-6 h-6" />
+            <span class="font-bold text-white ">React</span>
+          </div>
+          <div
+            class="flex items-center gap-2 rounded px-4 py-3  border-2 rounded-lg  rounded text-lg text-gray-500 opacity-40 hover:text-white hover:opacity-100  px-2">
+            <img src="./assets/github.png" alt="Ethereum" class="w-6 h-6" />
+            <span class="font-bold text-white ">GitHub</span>
+          </div>
+          <div
+            class="flex items-center gap-2 rounded px-4 py-3  border-2 rounded-lg  rounded text-lg text-gray-500 opacity-40 hover:text-white hover:opacity-100  px-2">
+            <img src="./assets/icons/git.png" alt="Ethereum" class="w-6 h-6" />
+            <span class="font-bold text-white ">Git</span>
+          </div>
+          <div
+            class="flex items-center gap-2 rounded px-4 py-3  border-2 rounded-lg  rounded text-lg text-gray-500 opacity-40 hover:text-white hover:opacity-100  px-2">
+            <img src="./assets/icons/1_Yhe1R94CIotr2se7Wf6TQQ.png" alt="Ethereum" class="w-6 h-6" />
+            <span class="font-bold text-white ">Node Js</span>
+          </div>
+          <div
+            class="flex items-center gap-2 rounded px-4 py-3  border-2 rounded-lg  rounded text-lg text-gray-500 opacity-40 hover:text-white hover:opacity-100  px-2">
+            <img src="./assets/icons/mongo.webp" alt="Ethereum" class="w-6 h-6" />
+            <span class="font-bold text-white ">MongoDB</span>
+          </div>
+          <div
+            class="flex items-center gap-2 rounded px-4 py-3  border-2 rounded-lg  rounded text-lg text-gray-500 opacity-40 hover:text-white hover:opacity-100  px-2">
+            <img src="https://aiconference.com/wp-content/uploads/2023/10/GenAI.png" alt="Ethereum" class="w-6 h-6" />
+            <span class="font-bold text-white ">Gen AI</span>
+          </div>
+          <div
+            class="flex items-center gap-2 rounded px-4 py-3  border-2 rounded-lg  rounded text-lg text-gray-500 opacity-40 hover:text-white hover:opacity-100  px-2">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXXnKphrlQj3AWTaZ6a_ZC3jnB8aZzt-TWkw&s"
+              alt="Ethereum" class="w-6 h-6" />
+            <span class="font-bold text-white ">Vector DB</span>
+          </div>
+          <div
+            class="flex items-center gap-2 rounded px-4 py-3  border-2 rounded-lg  rounded text-lg text-gray-500 opacity-40 hover:text-white hover:opacity-100  px-2">
+            <img src="https://static1.smartbear.co/swagger/media/assets/images/swagger_logo.svg" alt="Ethereum"
+              class="w-6 h-6" />
+            <span class="font-bold text-white ">Swagger</span>
+          </div>
 
- <div class="max-w-5xl mx-auto">
-  <h2 class="text-white text-2xl md:text-3xl font-mono font-bold mb-8 flex items-center gap-2">
-    <!-- <span>1.</span> <span>_skills</span> <span class="text-yellow-400"></span> -->
-  </h2>
-  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-    <div class="flex items-center gap-2 rounded px-4 py-3  border-2 rounded-lg  rounded text-lg text-gray-500 opacity-40 hover:text-white hover:opacity-100  px-2">
-      <img src="./assets/javascript.png" alt="Ethereum" class="w-6 h-6"/>
-      <span class="font-bold text-white ">JavaScript</span>
-    </div>  
-    <div class="flex items-center gap-2 rounded px-4 py-3  border-2 rounded-lg  rounded text-lg text-gray-500 opacity-40 hover:text-white hover:opacity-100  px-2">
-      <img src="./assets/html.png" alt="Ethereum" class="w-6 h-6"/>
-      <span class="font-bold text-white ">HTML</span>
-    </div>  
-    <div class="flex items-center gap-2 rounded px-4 py-3  border-2 rounded-lg  rounded text-lg text-gray-500 opacity-40 hover:text-white hover:opacity-100  px-2">
-      <img src="./assets/css.png" alt="Ethereum" class="w-6 h-6"/>
-      <span class="font-bold text-white ">CSS</span>
-    </div>  
-    <div class="flex items-center gap-2 rounded px-4 py-3  border-2 rounded-lg  rounded text-lg text-gray-500 opacity-40 hover:text-white hover:opacity-100  px-2">
-      <img src="./assets/icons/node.svg" alt="Ethereum" class="w-6 h-6"/>
-      <span class="font-bold text-white ">SCSS</span>
-    </div>  
-    <div class="flex items-center gap-2 rounded px-4 py-3  border-2 rounded-lg  rounded text-lg text-gray-500 opacity-40 hover:text-white hover:opacity-100  px-2">
-      <img src="./assets/icons/react.png" alt="Ethereum" class="w-6 h-6"/>
-      <span class="font-bold text-white ">React</span>
-    </div>  
-    <div class="flex items-center gap-2 rounded px-4 py-3  border-2 rounded-lg  rounded text-lg text-gray-500 opacity-40 hover:text-white hover:opacity-100  px-2">
-      <img src="./assets/github.png" alt="Ethereum" class="w-6 h-6"/>
-      <span class="font-bold text-white ">GitHub</span>
-    </div>  
-    <div class="flex items-center gap-2 rounded px-4 py-3  border-2 rounded-lg  rounded text-lg text-gray-500 opacity-40 hover:text-white hover:opacity-100  px-2">
-      <img src="./assets/icons/git.png" alt="Ethereum" class="w-6 h-6"/>
-      <span class="font-bold text-white ">Git</span>
-    </div>    
-    <div class="flex items-center gap-2 rounded px-4 py-3  border-2 rounded-lg  rounded text-lg text-gray-500 opacity-40 hover:text-white hover:opacity-100  px-2">
-      <img src="./assets/icons/1_Yhe1R94CIotr2se7Wf6TQQ.png" alt="Ethereum" class="w-6 h-6"/>
-      <span class="font-bold text-white ">Node Js</span>
-    </div>
-      <div class="flex items-center gap-2 rounded px-4 py-3  border-2 rounded-lg  rounded text-lg text-gray-500 opacity-40 hover:text-white hover:opacity-100  px-2">
-        <img src="./assets/icons/mongo.webp" alt="Ethereum" class="w-6 h-6"/>
-        <span class="font-bold text-white ">MongoDB</span>
+          <div
+            class="flex items-center gap-2 rounded px-4 py-3  border-2 rounded-lg  rounded text-lg text-gray-500 opacity-40 hover:text-white hover:opacity-100  px-2">
+            <img src="https://voyager.postman.com/logo/postman-logo-icon-orange.svg" alt="Ethereum" class="w-6 h-6" />
+            <span class="font-bold text-white ">Postman</span>
+          </div>
+
+          <div
+            class="flex items-center gap-2 rounded px-4 py-3  border-2 rounded-lg  rounded text-lg text-gray-500 opacity-40 hover:text-white hover:opacity-100  px-2">
+            <img src="https://socket.io/images/logo-dark.svg" alt="Ethereum" class="w-6 h-6" />
+            <span class="font-bold text-white ">Socket IO</span>
+          </div>
+
+          <div
+            class="flex items-center gap-2 rounded px-4 py-3  border-2 rounded-lg  rounded text-lg text-gray-500 opacity-40 hover:text-white hover:opacity-100  px-2">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzh48anxa_UMy9y1smIZXJ_q0o4QWDJIjxuw&s"
+              alt="Ethereum" class="w-6 h-6" />
+            <span class="font-bold text-white ">Express.js</span>
+          </div>
+        </div>
       </div>
-  </div>
-</div> 
-</section>
+    </section>
 
-<section id="socials" class="md:px-20 w-full mt-[10rem] relative">
-    <div id="socialHeader" class="projectHeader flex w-full justify-start items-center sticky top-0 z-10 bg-white">
+    <section id="socials" class="md:px-20 w-full mt-[10rem] relative">
+      <div id="socialHeader" class="projectHeader flex w-full justify-start items-center sticky top-0 z-10 bg-white">
         <h1 class="text-6xl font-medium tracking-tighter">Socials</h1>
         <div class="  border-t border-black mx-2 w-20 opacity-30"></div>
         <h2 class="text-6xl font-bold opacity-30 w-ful ">Connect With Me</h2>
-    </div>
-    <div class="social-content w-full flex justify-evenly gap-8 py-20">
+      </div>
+      <div class="social-content w-full flex justify-evenly gap-8 py-20">
         <!-- Add your social media links/icons here -->
-        <a href="https://github.com/vi5halsingh" class="text-4xl" target="_blank"> <img src="./assets/github.png" alt="" class="w-[70px] h-[70px] "></a>
-        <a href="https://www.linkedin.com/in/vi5halsingh/" class="text-4xl" target="_blank"> <img src="./assets/linked.png" alt="" class="w-[70px] h-[70px] "></a>
-        <a href="https://www.instagram.com/0._vishal?igsh=MTgwaWtkajd5ZHRnNQ==" class="text-4xl" target="_blank"> <img src="./assets/instagram.png" alt="" class="w-[70px] h-[70px] "></a>
+        <a href="https://github.com/vi5halsingh" class="text-4xl" target="_blank"> <img src="./assets/github.png" alt=""
+            class="w-[70px] h-[70px] "></a>
+        <a href="https://www.linkedin.com/in/vi5halsingh/" class="text-4xl" target="_blank"> <img
+            src="./assets/linked.png" alt="" class="w-[70px] h-[70px] "></a>
+        <a href="https://www.instagram.com/0._vishal?igsh=MTgwaWtkajd5ZHRnNQ==" class="text-4xl" target="_blank"> <img
+            src="./assets/instagram.png" alt="" class="w-[70px] h-[70px] "></a>
 
-    </div>
-    <p class="font-bold text-2xl text-center">Email: vishalsinghlodhi437@gmail.com</p>
-</section>
-
-
-<section id="gallery" class="showcase px-4 md:px-20 mt-10 md:mt-[10rem]">
-  <div>
-    <h6 class="font-medium text-2xl md:text-5xl opacity-30 text-center md:text-left">Welcome</h6>
-    <div class="flex flex-col md:flex-row items-center gap-4 mt-4 md:mt-0">
-      <h1 class="font-bold text-4xl md:text-8xl text-center">Gallery</h1>
-      <img src="./assets/arrow svg.svg" alt="" class="w-20 md:w-40 rotate-90 md:rotate-0">
-      <h1 class="font-bold text-4xl md:text-8xl opacity-30 text-center">My Journey</h1>
-    </div>
-  </div>
-  
-  <div class="mt-8 md:mt-[10rem]">
-    <h6 class="font-bold text-2xl md:text-5xl">Cyber Awareness Event</h6>
-    <div class="flex flex-col md:flex-row items-center gap-4 mt-4">
-      <h1 class="font-medium text-xl md:text-3xl">2025</h1>
-      <img src="./assets/arrow svg.svg" alt="" class="w-12 md:w-20 rotate-90 md:rotate-0">
-      <h1 class="font-medium text-lg md:text-3xl text-center">Eklavya University Damoh</h1>
-    </div>
-    <img src="./assets/projects/cyber- awareness.jpg" alt="" class="w-full h-48 md:h-[500px] object-cover mt-4 rounded-lg">
-  </div>
-
-  <div class="flex flex-col md:flex-row gap-8 pt-8 md:pt-20">
-    <div class="md:w-1/2">
-      <h6 class="font-bold text-xl md:text-4xl">Mai Vishal Hoon </h6>
-      <div class="flex flex-col md:flex-row items-center gap-4 mt-4">
-        <h1 class="font-medium text-lg md:text-2xl">2024</h1>
-        <img src="./assets/arrow svg.svg" alt="" class="w-12 md:w-20 rotate-90 md:rotate-0">
-        <h1 class="font-medium text-lg md:text-3xl text-center">Vishal Singh Lodhi</h1>
       </div>
-      <img src="./assets/WhatsApp Image 2024-08-14 at 22.22.39_4fd5ff84.jpg" alt="" class="w-full h-48 md:h-[300px] object-cover mt-4 rounded-lg">
-    </div>
-    
-    <div class="md:w-1/2 mt-8 md:mt-[15em]">
-      <h6 class="font-bold text-xl md:text-4xl">SkillsVarz Hackathon</h6>
-      <div class="flex flex-col md:flex-row items-center gap-4 mt-4">
-        <h1 class="font-medium text-lg md:text-2xl">2025</h1>
-        <img src="./assets/arrow svg.svg" alt="" class="w-12 md:w-20 rotate-90 md:rotate-0">
-        <h1 class="font-medium text-lg md:text-3xl text-center">Bhopal</h1>
+      <p class="font-bold text-2xl text-center">Email: vishalsinghlodhi437@gmail.com</p>
+    </section>
+
+
+    <section id="gallery" class="showcase px-4 md:px-20 mt-10 md:mt-[10rem]">
+      <div>
+        <h6 class="font-medium text-2xl md:text-5xl opacity-30 text-center md:text-left">Welcome</h6>
+        <div class="flex flex-col md:flex-row items-center gap-4 mt-4 md:mt-0">
+          <h1 class="font-bold text-4xl md:text-8xl text-center">Gallery</h1>
+          <img src="./assets/arrow svg.svg" alt="" class="w-20 md:w-40 rotate-90 md:rotate-0">
+          <h1 class="font-bold text-4xl md:text-8xl opacity-30 text-center">My Journey</h1>
+        </div>
       </div>
-      <img src="./assets/projects/Innove8rs.png" alt="" class="w-full h-48 md:h-[400px] object-cover mt-4 rounded-lg">
-    </div>
-  </div>
-</section>
-<section id="contact" class="md:px-20 w-full mt-[10rem] relative">
-  <div class="  flex w-full justify-start items-center sticky top-0 z-10 bg-white">
-          <h1 class="text-6xl font-medium tracking-tighter">Contact</h1>
-          <div class="border-t border-black mx-2 w-20 opacity-30"></div>
-          <h2 class="text-6xl font-bold opacity-30">Get Into Touch</h2>
+
+      <div class="mt-8 md:mt-[10rem]">
+        <h6 class="font-bold text-2xl md:text-5xl">Cyber Awareness Event</h6>
+        <div class="flex flex-col md:flex-row items-center gap-4 mt-4">
+          <h1 class="font-medium text-xl md:text-3xl">2025</h1>
+          <img src="./assets/arrow svg.svg" alt="" class="w-12 md:w-20 rotate-90 md:rotate-0">
+          <h1 class="font-medium text-lg md:text-3xl text-center">Eklavya University Damoh</h1>
+        </div>
+        <img src="./assets/projects/cyber- awareness.jpg" alt=""
+          class="w-full h-48 md:h-[500px] object-cover mt-4 rounded-lg">
+      </div>
+
+      <div class="flex flex-col md:flex-row gap-8 pt-8 md:pt-20">
+        <div class="md:w-1/2">
+          <h6 class="font-bold text-xl md:text-4xl">Mai Vishal Hoon </h6>
+          <div class="flex flex-col md:flex-row items-center gap-4 mt-4">
+            <h1 class="font-medium text-lg md:text-2xl">2024</h1>
+            <img src="./assets/arrow svg.svg" alt="" class="w-12 md:w-20 rotate-90 md:rotate-0">
+            <h1 class="font-medium text-lg md:text-3xl text-center">Vishal Singh Lodhi</h1>
+          </div>
+          <img src="./assets/WhatsApp Image 2024-08-14 at 22.22.39_4fd5ff84.jpg" alt=""
+            class="w-full h-48 md:h-[300px] object-cover mt-4 rounded-lg">
+        </div>
+
+        <div class="md:w-1/2 mt-8 md:mt-[15em]">
+          <h6 class="font-bold text-xl md:text-4xl">SkillsVarz Hackathon</h6>
+          <div class="flex flex-col md:flex-row items-center gap-4 mt-4">
+            <h1 class="font-medium text-lg md:text-2xl">2025</h1>
+            <img src="./assets/arrow svg.svg" alt="" class="w-12 md:w-20 rotate-90 md:rotate-0">
+            <h1 class="font-medium text-lg md:text-3xl text-center">Bhopal</h1>
+          </div>
+          <img src="./assets/projects/Innove8rs.png" alt=""
+            class="w-full h-48 md:h-[400px] object-cover mt-4 rounded-lg">
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="md:px-20 w-full mt-[10rem] relative">
+      <div class="  flex w-full justify-start items-center sticky top-0 z-10 bg-white">
+        <h1 class="text-6xl font-medium tracking-tighter">Contact</h1>
+        <div class="border-t border-black mx-2 w-20 opacity-30"></div>
+        <h2 class="text-6xl font-bold opacity-30">Get Into Touch</h2>
       </div>
       <div class="contact-form w-full py-20 max-w-4xl mx-auto">
-          <form action="https://api.web3forms.com/submit" method="POST" id="form" class="space-y-6">
-              <input type="hidden" name="access_key" value="2a9803cc-2e6e-45c6-85a3-370e93130b94" />
-              <input type="hidden" name="subject" value="New Portfolio Inquiry" class="dark:bg-gray-800" />
-              
-              <div>
-                  <input type="text" name="name" placeholder="Full Name" required 
-                         class="w-full p-4 border-b border-black dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-gray-400 bg-transparent dark:text-gray-200"/>
-              </div>
-              
-              <div>
-                  <input type="email" name="email" placeholder="Email Address" required 
-                         class="w-full p-4 border-b border-black dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-gray-400 bg-transparent dark:text-gray-200"/>
-              </div>
-              
-              <div>
-                  <input type="text" name="phone" placeholder="Phone Number" 
-                         class="w-full p-4 border-b border-black dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-gray-400 bg-transparent dark:text-gray-200"/>
-              </div>
-              
-              <div>
-                  <textarea rows="3" name="message" placeholder="Your Message" required 
-                            class="w-full p-4 border-b border-black dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-gray-400 bg-transparent dark:text-gray-200"></textarea>
-              </div>
+        <form action="https://api.web3forms.com/submit" method="POST" id="form" class="space-y-6">
+          <input type="hidden" name="access_key" value="2a9803cc-2e6e-45c6-85a3-370e93130b94" />
+          <input type="hidden" name="subject" value="New Portfolio Inquiry" class="dark:bg-gray-800" />
 
-              <button type="submit" 
-                      class="bg-black dark:bg-gray-800 text-white dark:text-gray-200 px-8 py-3 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-700 transition-colors w-full sm:w-auto text-center">
-                  Send Message
-              </button>
-              
-              <p class="text-center text-gray-500 dark:text-gray-400" id="result"></p>
-          </form>
+          <div>
+            <input type="text" name="name" placeholder="Full Name" required
+              class="w-full p-4 border-b border-black dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-gray-400 bg-transparent dark:text-gray-200" />
+          </div>
+
+          <div>
+            <input type="email" name="email" placeholder="Email Address" required
+              class="w-full p-4 border-b border-black dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-gray-400 bg-transparent dark:text-gray-200" />
+          </div>
+
+          <div>
+            <input type="text" name="phone" placeholder="Phone Number"
+              class="w-full p-4 border-b border-black dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-gray-400 bg-transparent dark:text-gray-200" />
+          </div>
+
+          <div>
+            <textarea rows="3" name="message" placeholder="Your Message" required
+              class="w-full p-4 border-b border-black dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-gray-400 bg-transparent dark:text-gray-200"></textarea>
+          </div>
+
+          <button type="submit"
+            class="bg-black dark:bg-gray-800 text-white dark:text-gray-200 px-8 py-3 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-700 transition-colors w-full sm:w-auto text-center">
+            Send Message
+          </button>
+
+          <p class="text-center text-gray-500 dark:text-gray-400" id="result"></p>
+        </form>
       </div>
     </section>
-    <section class="footer flex justify-between mt-[10em] md:px-20"><div class="name flex justify-evenly w-40">
-      <h1 class="font-bold text-sm">Vishal</h1><h5 class="text-sm font-medium">Singh Lodhi</h5>
+    <section class="footer flex justify-between mt-[10em] md:px-20">
+      <div class="name flex justify-evenly w-40">
+        <h1 class="font-bold text-sm">Vishal</h1>
+        <h5 class="text-sm font-medium">Singh Lodhi</h5>
 
-    </div>
-    <div class="timeDate font-bold text-sm">12-02-2025 [21:01]</div>
+      </div>
+      <div class="timeDate font-bold text-sm">12-02-2025 [21:01]</div>
     </section>
-  
-    
-    <button id="topButton" class="fixed bottom-8 right-6 p-4 text-white rounded-full opacity-0 transition-all duration-300 hover:scale-110  shadow-xl bg-gray-500 hover:bg-gray-200 cursor-pointer">
+
+
+    <button id="topButton"
+      class="fixed bottom-8 right-6 p-4 text-white rounded-full opacity-0 transition-all duration-300 hover:scale-110  shadow-xl bg-gray-500 hover:bg-gray-200 cursor-pointer">
       <img src="./assets/up (1).svg" alt="" class="h-[20px] w-[20px] ">
     </button>
   </main>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-   <script src="./animation.js"></script>  
-  
-  <script>
-  gsap.registerPlugin(ScrollTrigger);
+  <script src="./animation.js"></script>
 
-  gsap.from(".starting", {
-    opacity: 0,
-    y:100,
-    duration: 1,
-    stagger: 0.3,
-    scrollTrigger: {
-      trigger: ".imagecontent",
-      start: "top 100%",
-      end: "bottom 30%",
-      scrub: true
-    }
-  });
-  var updateDateTime = () => {
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.from(".starting", {
+      opacity: 0,
+      y: 100,
+      duration: 1,
+      stagger: 0.3,
+      scrollTrigger: {
+        trigger: ".imagecontent",
+        start: "top 100%",
+        end: "bottom 30%",
+        scrub: true
+      }
+    });
+    var updateDateTime = () => {
       let d = new Date();
       let hour = d.getHours().toString().padStart(2, '0');
       let minute = d.getMinutes().toString().padStart(2, '0');
       let second = d.getSeconds().toString().padStart(2, '0');
       let time = `${hour}:${minute}:${second}`;
-     
+
       // Update timing display
       const timingElement = document.querySelector('.timing');
-      if(timingElement) {
+      if (timingElement) {
         timingElement.textContent = `[${time}]`;
       }
       const timeDateElement = document.querySelector('.timeDate');
-      if(timeDateElement) {
+      if (timeDateElement) {
         let day = d.getDate().toString().padStart(2, '0');
         let month = (d.getMonth() + 1).toString().padStart(2, '0');
         let year = d.getFullYear();
         timeDateElement.textContent = `${day}-${month}-${year} [${time}]`;
       }
     }
-    
-  
-   setInterval(() => {
+
+
+    setInterval(() => {
       updateDateTime();
     }, 1000);
   </script>
@@ -514,118 +625,116 @@
 
 
 
-<script>
-  document.querySelectorAll('.bg-white').forEach(element => element.style.backgroundColor = '#2d2d2d'
-  )
+  <script>
+    document.querySelectorAll('.bg-white').forEach(element => element.style.backgroundColor = '#2d2d2d'
+    )
 
     document.getElementById('topButton').addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
     document.getElementById('topButton').addEventListener('dblclick', () => {
-          
-  const styleLink = document.querySelector('link[href="style.css"]');
-  if (styleLink) {
-    styleLink.disabled = !styleLink.disabled;
-     document.querySelectorAll('.bg-white').forEach(element => element.style.backgroundColor = "transparent" 
-  )
-  }
-        });
-     
+
+      const styleLink = document.querySelector('link[href="style.css"]');
+      if (styleLink) {
+        styleLink.disabled = !styleLink.disabled;
+        document.querySelectorAll('.bg-white').forEach(element => element.style.backgroundColor = "transparent"
+        )
+      }
+    });
+
 
     // Show/hide button with GSAP animation
     gsap.to("#topButton", {
-        opacity: 1,
-        duration: 0.5,
-        scrollTrigger: {
-            start: "top center",
-            onEnter: () => gsap.to("#topButton", { opacity: 1, duration: 0.5 }),
-            onLeaveBack: () => gsap.to("#topButton", { opacity: 1, duration: 0.5 }),
-        }
+      opacity: 1,
+      duration: 0.5,
+      scrollTrigger: {
+        start: "top center",
+        onEnter: () => gsap.to("#topButton", { opacity: 1, duration: 0.5 }),
+        onLeaveBack: () => gsap.to("#topButton", { opacity: 1, duration: 0.5 }),
+      }
     });
-</script>
-<script>
-        // Theme Toggle Functionality
-        const themeToggle = document.getElementById('themeToggle');
+  </script>
+  <script>
+    // Theme Toggle Functionality
+    const themeToggle = document.getElementById('themeToggle');
     const lightIcon = document.getElementById('lightIcon');
     const darkIcon = document.getElementById('darkIcon');
     const body = document.body;
-        const projectHeader = document.querySelector('.projectHeader');
-        const socialHeader = document.querySelector('#socialHeader');
-        const Grps = document.querySelector('.group');
-        const bgChange = document.querySelectorAll('.bg-white');
-        const dotImage = document.getElementById('dotImage');
+    const projectHeader = document.querySelector('.projectHeader');
+    const socialHeader = document.querySelector('#socialHeader');
+    const Grps = document.querySelector('.group');
+    const bgChange = document.querySelectorAll('.bg-white');
+    const dotImage = document.getElementById('dotImage');
 
-        // Initialize theme - Start with dark mode by default
-        if (localStorage.getItem('theme') === 'light') {
-            enableLightMode();
-        } else {
-            enableDarkMode();  // This will be the default state
-        }
+    // Initialize theme - Start with dark mode by default
+    if (localStorage.getItem('theme') === 'light') {
+      enableLightMode();
+    } else {
+      enableDarkMode();  // This will be the default state
+    }
 
-        themeToggle.addEventListener('click', () => {
-            if (body.classList.contains('dark-theme')) {
-                enableLightMode();
-            } else {
-                enableDarkMode();
-            }
-        });
-
-        function enableDarkMode() {
-            body.classList.add('dark-theme');
-            lightIcon.classList.add('hidden');
-            darkIcon.classList.remove('hidden');
-            localStorage.setItem('theme', 'dark');
-            projectHeaderDarkMode()
-          }
-          function projectHeaderDarkMode() {
-            dotImage.classList.add('invisible')
-            bgChange.forEach((element) => {
-              element.classList.remove('bg-white');
-              element.style.backgroundColor = '#1a1a1a'
-              element.style.color = '#f0f0f0';
-            })
-          }
-          function projectHeaderLightMode() {
-            dotImage.classList.remove('invisible')
-            bgChange.forEach((element) => {
-              element.classList.remove('bg-white');
-              element.style.backgroundColor = '#f0f0f0'
-              element.style.color = 'black';
-            })
-          }
-          projectHeader.classList.remove('dark-theme');
-          
-          function enableLightMode() {
-            projectHeaderLightMode()
-            body.classList.remove('dark-theme');
-            darkIcon.classList.add('hidden');
-            lightIcon.classList.remove('hidden');
-            localStorage.setItem('theme', 'light');
-        }
-    </script>
-    
-  <script src="script.js"></script> 
- <!-- Load Three.js first -->
- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
- <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
-
- <!-- Then load your three.js script -->
- <script src="three.js"></script>
-<!-- Add this script before closing </body> -->
-<script>
-    window.addEventListener('load', () => {
-        const loader = document.getElementById('loader');
-        // Minimum display time for smooth transition (1.5 seconds)
-        setTimeout(() => {
-            loader.style.opacity = '0';
-            setTimeout(() => {
-                loader.style.display = 'none';
-            }, 500);
-        }, 2000);
+    themeToggle.addEventListener('click', () => {
+      if (body.classList.contains('dark-theme')) {
+        enableLightMode();
+      } else {
+        enableDarkMode();
+      }
     });
-</script>
+
+    function enableDarkMode() {
+      body.classList.add('dark-theme');
+      lightIcon.classList.add('hidden');
+      darkIcon.classList.remove('hidden');
+      localStorage.setItem('theme', 'dark');
+      projectHeaderDarkMode()
+    }
+    function projectHeaderDarkMode() {
+      dotImage.classList.add('invisible')
+      bgChange.forEach((element) => {
+        element.classList.remove('bg-white');
+        element.style.backgroundColor = '#1a1a1a'
+        element.style.color = '#f0f0f0';
+      })
+    }
+    function projectHeaderLightMode() {
+      dotImage.classList.remove('invisible')
+      bgChange.forEach((element) => {
+        element.classList.remove('bg-white');
+        element.style.backgroundColor = '#f0f0f0'
+        element.style.color = 'black';
+      })
+    }
+    projectHeader.classList.remove('dark-theme');
+
+    function enableLightMode() {
+      projectHeaderLightMode()
+      body.classList.remove('dark-theme');
+      darkIcon.classList.add('hidden');
+      lightIcon.classList.remove('hidden');
+      localStorage.setItem('theme', 'light');
+    }
+  </script>
+
+  <script src="script.js"></script>
+  <!-- Load Three.js first -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+
+  <!-- Then load your three.js script -->
+  <script src="three.js"></script>
+  <!-- Add this script before closing </body> -->
+  <script>
+    window.addEventListener('load', () => {
+      const loader = document.getElementById('loader');
+      // Minimum display time for smooth transition (1.5 seconds)
+      setTimeout(() => {
+        loader.style.opacity = '0';
+        setTimeout(() => {
+          loader.style.display = 'none';
+        }, 500);
+      }, 2000);
+    });
+  </script>
 </body>
 
 </html>
-
-
